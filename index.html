@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LocalLens | Discover Beyond the Ordinary</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+        <a href="#" class="logo">Local<span>Lens.</span></a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#discover">Explore</a>
+            <a href="#about">About</a>
+            <button class="nav-button" id="share-nav">Share a Place</button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">SEE YOUR WORLD DIFFERENTLY</p>
+
+            <h1>Your city has<br>more to <span>tell.</span></h1>
+
+            <p class="hero-description">
+                Discover hidden gems, local favourites and
+                extraordinary places waiting just around the corner.
+            </p>
+
+            <div class="search-container">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search places, food, nature..."
+                >
+
+                <button id="search-button">Explore →</button>
+            </div>
+
+            <a href="#discover" class="explore-link">
+                Discover something new ↓
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900"
+                alt="Beautiful city skyline"
+            >
+
+            <div class="image-caption">
+                <span>✦</span>
+                Every corner has a story.
+            </div>
+        </div>
+
+    </header>
+
+    <!-- CATEGORIES -->
+
+    <section class="categories-section" id="categories">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">FIND YOUR KIND OF PLACE</p>
+                <h2>Explore by interest.</h2>
+            </div>
+        </div>
+
+        <div class="category-grid">
+
+            <button class="category-card" data-category="Food">
+                <span>🍜</span>
+                <h3>Food & Cafés</h3>
+                <p>Local flavours and favourites</p>
+            </button>
+
+            <button class="category-card" data-category="Nature">
+                <span>🌿</span>
+                <h3>Nature</h3>
+                <p>Quiet escapes and greenery</p>
+            </button>
+
+            <button class="category-card" data-category="Culture">
+                <span>🏛️</span>
+                <h3>Culture</h3>
+                <p>Stories, history and heritage</p>
+            </button>
+
+            <button class="category-card" data-category="Hidden Gems">
+                <span>💎</span>
+                <h3>Hidden Gems</h3>
+                <p>Places worth discovering</p>
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- DISCOVER PLACES -->
+
+    <section class="discover-section" id="discover">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">THE LOCAL COLLECTION</p>
+                <h2>Places worth knowing.</h2>
+            </div>
+
+            <button class="clear-filter" id="clear-filter">
+                View All
+            </button>
+        </div>
+
+        <div class="places-grid" id="places-grid">
+
+            <!-- Place cards are added through JavaScript -->
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=900"
+                alt="Beautiful landscape"
+            >
+        </div>
+
+        <div class="about-content">
+
+            <p class="eyebrow">MORE THAN JUST A MAP</p>
+
+            <h2>Discover the places<br>people usually miss.</h2>
+
+            <p>
+                LocalLens is about looking beyond popular destinations.
+                It's about discovering small cafés, peaceful corners,
+                local traditions and places with stories worth sharing.
+            </p>
+
+            <button class="primary-button" id="share-about">
+                Share Your Discovery →
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- SHARE PLACE MODAL -->
+
+    <div class="modal-overlay" id="share-modal">
+
+        <div class="modal-box">
+
+            <button class="close-button" id="close-modal">&times;</button>
+
+            <p class="eyebrow">ADD TO THE COLLECTION</p>
+
+            <h2>Share a Place.</h2>
+
+            <form id="share-form">
+
+                <label for="place-name">Place Name</label>
+                <input
+                    type="text"
+                    id="place-name"
+                    placeholder="Enter a place name"
+                    required
+                >
+
+                <label for="place-category">Category</label>
+
+                <select id="place-category" required>
+                    <option value="">Choose a category</option>
+                    <option value="Food">Food & Cafés</option>
+                    <option value="Nature">Nature</option>
+                    <option value="Culture">Culture</option>
+                    <option value="Hidden Gems">Hidden Gems</option>
+                </select>
+
+                <label for="place-location">Location</label>
+                <input
+                    type="text"
+                    id="place-location"
+                    placeholder="City or area"
+                    required
+                >
+
+                <label for="place-description">Why should people visit?</label>
+                <textarea
+                    id="place-description"
+                    placeholder="Tell us what makes this place special..."
+                    rows="4"
+                    required
+                ></textarea>
+
+                <button type="submit" class="primary-button submit-button">
+                    Add My Discovery
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <a href="#" class="logo">Local<span>Lens.</span></a>
+
+        <p>Explore locally. Experience differently.</p>
+
+        <p class="copyright">
+            © 2026 LocalLens. Discover beyond the ordinary.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
